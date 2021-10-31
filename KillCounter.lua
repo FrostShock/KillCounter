@@ -61,7 +61,6 @@ textFrame:SetScript("OnEvent", function()
        _,_,KCMob = string.find(arg1, "You have slain (.*)!")
        if KCMobs ~= "" then
          KCMobs = KCMobs..", "..KCMob
-         KCpos,_,_ = string.find(KCMobs, ",")
          if string.len(KCMobs) > 500 then
            _,_,KCMobs = string.find(KCMobs, ", (.*)")
          end
@@ -75,6 +74,3 @@ end)
 
 KillCounter = 0
 KCMobs = ""
-
---  if you want more details then uncomment the next line
--- KCdetails=1
