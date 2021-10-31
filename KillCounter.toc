@@ -1,0 +1,5 @@
+## Interface: 11200
+## Notes: Shows how many things you killed (mobs, players, critters)
+## Version: 1.0
+
+KillCounter.lua
