@@ -11,9 +11,15 @@ KCFrame:SetMovable(true)
 KCFrame:SetScript("OnMouseDown", function()
   if arg1 == "LeftButton" then
     this:StartMoving()
-  else
+  end
+  if arg1 == "RightButton" then
 --    DEFAULT_CHAT_FRAME:AddMessage("The mobs you killed: "..KCMobs.." - "..string.len(KCMobs))
     DEFAULT_CHAT_FRAME:AddMessage("The mobs you killed: "..KCMobs)
+  end
+  if arg1 == "MiddleButton" then
+    KillCounter = 0
+    KCMobs = ""
+    DEFAULT_CHAT_FRAME:AddMessage("The kill counter is reset to zero ! ")
   end
 end)
 
